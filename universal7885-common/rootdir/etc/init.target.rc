@@ -797,6 +797,9 @@ on boot
 on property:sys.boot_completed=1
     # Disable hw watchdog
     write /dev/watchdog1 "V"
+    # Hide Permissive status (if)
+    chmod 0640 /sys/fs/selinux/enforce
+    chmod 0440 /sys/fs/selinux/policy
 
     swapon_all /system/etc/fstab.enableswap
 
