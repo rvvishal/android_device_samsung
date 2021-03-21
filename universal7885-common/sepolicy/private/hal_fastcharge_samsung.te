@@ -7,4 +7,5 @@ init_daemon_domain(hal_fastcharge_samsung)
 allow hal_fastcharge_samsung sysfs_sec_switch:dir search;
 allow hal_fastcharge_samsung sysfs_sec_switch:file rw_file_perms;
 
+get_prop(hal_fastcharge_samsung, sec_fastcharge_prop)
 set_prop(hal_fastcharge_samsung, sec_fastcharge_prop)
