@@ -794,6 +794,12 @@ on boot
     chown system mtp /dev/usb_mtp_gadget
     mkdir /dev/socket/mtp 0770 system mtp
 
+    # Permissions for SmartCharging
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+
+    # Spectrum
+    import /init.spectrum.rc
+
 on property:sys.boot_completed=1
     # Disable hw watchdog
     write /dev/watchdog1 "V"

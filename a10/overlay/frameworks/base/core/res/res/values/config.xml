@@ -8,7 +8,7 @@
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
     <bool name="config_dozePulsePickup">false</bool>
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -67.42857142857143 V 30.85714285714286 H 67.42857142857143 V 0 H 0 Z @dp</string>	
     <bool name="config_supportDoubleTapWake">false</bool>
