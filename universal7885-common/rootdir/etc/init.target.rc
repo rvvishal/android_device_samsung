@@ -862,10 +862,6 @@ service snap_utility_32 /system/bin/true
     oneshot
     disabled
 
-service snap_utility_64 /system/bin/true
-    oneshot
-    disabled
-
 service timaserv /system/bin/true
     oneshot
     disabled
