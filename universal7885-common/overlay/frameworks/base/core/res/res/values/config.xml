@@ -516,7 +516,7 @@
         <item>253</item>
         <item>254</item>
         <item>255</item>
-        <item>366</item>
+        <item>306</item>
     </integer-array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
@@ -782,7 +782,7 @@
         <item>398</item>
         <item>399</item>
         <item>470</item>
-        <item>600</item>
+        <item>520</item>
     </array>
     <array name="config_screenBrightnessRangeForClearView" />
     <integer-array name="config_screenDarkeningThresholds">
@@ -1054,4 +1054,11 @@
          by shrinking the display such that it does not overlap the cutout area. -->
     <bool name="config_maskMainBuiltInDisplayCutout">false</bool>
 
+    <!-- System info -->
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
 </resources>

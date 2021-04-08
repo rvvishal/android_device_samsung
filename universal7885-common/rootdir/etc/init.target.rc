@@ -59,6 +59,10 @@ on late-fs
     write /sys/block/sda/queue/nr_requests 256
 
 on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
     # USB conn_gadget device (DeXonPC, Samsung Flow)
     chown system system /dev/android_ssusbcon
     chmod 0660 /dev/android_ssusbcon
@@ -528,7 +532,7 @@ on boot
 	chmod 0664 /sys/class/power_supply/battery/fg_full_voltage
 	chown system radio /sys/class/power_supply/battery/batt_reset_soc
 	chown system system /sys/class/power_supply/battery/batt_slate_mode
-        chmod 0664 /sys/class/power_supply/battery/battery/batt_slate_mode
+        chmod 0666 /sys/class/power_supply/battery/battery/batt_slate_mode
 	chown system radio /sys/class/power_supply/battery/factory_mode
 	chown system radio /sys/class/power_supply/battery/siop_level
 	chown system radio /sys/class/power_supply/battery/siop_event
@@ -799,6 +803,9 @@ on boot
     import /init.spectrum.rc
 
 on property:sys.boot_completed=1
+    # Stop logging service
+    stop logger
+
     # Disable hw watchdog
     write /dev/watchdog1 "V"
 
@@ -865,6 +872,13 @@ service snap_utility_32 /system/bin/true
 service snap_utility_64 /system/bin/true
     oneshot
     disabled
+
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
 service timaserv /system/bin/true
     oneshot
