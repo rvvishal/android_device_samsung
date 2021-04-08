@@ -869,10 +869,6 @@ service snap_utility_32 /system/bin/true
     oneshot
     disabled
 
-service snap_utility_64 /system/bin/true
-    oneshot
-    disabled
-
 service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
     class main
     user root

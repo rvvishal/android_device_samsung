@@ -10,3 +10,8 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_NAME := havoc_a10
+
+# Havoc INITIALIZE
+export HAVOC_BUILD_TYPE=Official
+HAVOC_MAINTAINER := Gabriel (gabriel260)
+HAVOC_GROUP_URL := https://t.me/eureka_support_group2
