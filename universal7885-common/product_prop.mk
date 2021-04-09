@@ -60,3 +60,8 @@ ro.lineage.build.vendor_security_patch=2020-12-01
 # Zygote
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Fluid ROM stuffs
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=Chatur \
+  ro.fluid.cpu=Exynos7885
