@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_a10.mk
+    $(LOCAL_DIR)/dot_a10.mk
