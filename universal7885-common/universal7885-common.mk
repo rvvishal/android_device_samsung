@@ -25,10 +25,9 @@ TARGET_SCREEN_WIDTH := 720
 #PRODUCT_PACKAGES += \
 #    lineage.fastcharge@1.0-service.samsung
 
-# Shit
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.settings.xml:system/system_ext/etc/permissions/privapp_whitelist_com.android.settings.xml
-#    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.systemui.xml:system/system_ext/etc/permissions/privapp_whitelist_com.android.systemui.xml
+# Havoc launcher priv-app permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.launcher3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.android.launcher3.xml
 
 # Init scripts
 PRODUCT_PACKAGES += \
