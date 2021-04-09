@@ -47,15 +47,18 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 # Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos7885 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos7885 androidboot.init_fatal_reboot_target=recovery
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPSA10A003
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos7885
+TARGET_KERNEL_HEADER_SOURCE := kernel/samsung/exynos7885
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 #KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel/Image
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/kernel/dtbo.img
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # HIDL
