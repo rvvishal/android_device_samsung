@@ -25,10 +25,6 @@ TARGET_SCREEN_WIDTH := 720
 #PRODUCT_PACKAGES += \
 #    lineage.fastcharge@1.0-service.samsung
 
-# Havoc launcher priv-app permissions
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.launcher3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.android.launcher3.xml
-
 # Init scripts
 PRODUCT_PACKAGES += \
     init.target.rc \
@@ -64,6 +60,12 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.universal7885
+
+# Missing priv-app permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.launcher3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.android.launcher3.xml \
+    $(LOCAL_PATH)/xml/privapp_whitelist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp_whitelist_com.android.omadm.service.xml \
+    $(LOCAL_PATH)/xml/privapp_whitelist_com.google.android.apps.turbo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp_whitelist_com.google.android.apps.turbo.xml
 
 # Recovery
 PRODUCT_PACKAGES += \
