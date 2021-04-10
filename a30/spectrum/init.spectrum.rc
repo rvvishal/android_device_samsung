@@ -3,7 +3,7 @@
 # Implementation inspired by Franco's fku profiles
 
 
-# Edit for Eureka kernel for A30 R5.X by Chatur27 on XDA
+# Edit for Eureka kernel for A30 R5.0 by Chatur27 on XDA
 #
 ## Initialization
 #
@@ -99,4 +99,3 @@ on property:persist.spectrum.profile=3
     write /sys/kernel/hmp/up_threshold 430
     write /sys/kernel/hmp/down_threshold 150
     write /sys/module/workqueue/parameters/power_efficient N
-

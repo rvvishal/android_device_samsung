@@ -1,11 +1,11 @@
-DEVICE_PATH := device/samsung/a20
+DEVICE_PATH := device/samsung/a30
 
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/samsung/exynos7885/exynos7885-vendor.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
@@ -18,8 +18,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1560
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
 
 # FastCharge
 PRODUCT_PACKAGES += \
