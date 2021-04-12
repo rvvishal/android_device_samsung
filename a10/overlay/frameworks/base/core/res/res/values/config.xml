@@ -51,5 +51,5 @@
      <bool name="config_enableBurnInProtection">true</bool>
 
     <!-- If supported, are dreams enabled? (by default) -->
-    <bool name="config_dreamsEnabledByDefault">false/bool>
+    <bool name="config_dreamsEnabledByDefault">false</bool>
 </resources>
