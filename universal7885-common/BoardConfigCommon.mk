@@ -72,6 +72,7 @@ BOARD_HAS_DOWNLOAD_MODE := true
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Vendor
@@ -79,6 +80,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Vendor Security Patch
 VENDOR_SECURITY_PATCH := 2020-12-01
+
+# Lineage hardware
+BOARD_HARDWARE_CLASS := \
+    hardware/samsung/lineagehw
 
 # VNDK
 BOARD_VNDK_VERSION := current
