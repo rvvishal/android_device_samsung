@@ -6,9 +6,6 @@ on init
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 160
 
-    # Fastcharge
-    chown system radio /sys/class/sec/switch/afc_disable
-
 on fs
     write /dev/blkio/background/blkio.weight 500
 
