@@ -154,13 +154,9 @@ libbinder.so
 libcamera_client.so
 libcamera_metadata.so
 libcap.so
-libclang_rt.scudo-aarch64-android.so
 libclang_rt.scudo-arm-android.so
-libclang_rt.scudo_minimal-aarch64-android.so
 libclang_rt.scudo_minimal-arm-android.so
-libclang_rt.ubsan_minimal-aarch64-android.so
 libclang_rt.ubsan_minimal-arm-android.so
-libclang_rt.ubsan_standalone-aarch64-android.so
 libclang_rt.ubsan_standalone-arm-android.so
 libcn-cbor.so
 libcodec2.so
