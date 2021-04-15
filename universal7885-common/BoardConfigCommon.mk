@@ -29,6 +29,9 @@ BUILD_BROKEN_DUP_RULES := true
 # Camera
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Enable stats logging in LMKD
 #TARGET_LMKD_STATS_LOG := true
 
