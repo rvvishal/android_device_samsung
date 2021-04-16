@@ -1,7 +1,7 @@
 $(call inherit-product, device/samsung/a10/full_a10.mk)
 
 # Inherit some common Potato stuff.
-$(call inherit-product, vendor/potato/config/common_full_go_phone.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
