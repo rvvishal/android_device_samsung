@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
     build/target/product/gsi/gsi_skip_mount.cfg:system/system_ext/etc/init/config/skip_mount.cfg
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \arm64-11-posp
+PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Spectrum files
