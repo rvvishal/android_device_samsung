@@ -1,3 +1,7 @@
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
 on early-fs
     setprop sys.usb.configfs 1
     setprop sys.usb.controller 13600000.dwc3

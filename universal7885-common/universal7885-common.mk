@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
     build/target/product/gsi/gsi_skip_mount.cfg:system/system_ext/etc/init/config/skip_mount.cfg
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
+PRODUCT_SOONG_NAMESPACES += \arm64-11-posp
     $(LOCAL_PATH)
 
 # Spectrum files
@@ -91,8 +91,8 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/product_prop.mk
 
 # Trust HAL
-#PRODUCT_PACKAGES += \
-#    lineage.trust@1.0-service
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
 
 # Touch
 PRODUCT_PACKAGES += \
